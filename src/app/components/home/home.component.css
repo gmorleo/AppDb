@@ -1,0 +1,22 @@
+.contaniner {
+  width: auto;
+  max-width: 1000px;
+  border: 1px solid #666;
+  text-align: center;
+  margin: 0 auto;
+}
+.tab {
+  width: 50%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 22px;
+  color: #FFFFFF;
+  background-color: #666666;
+}
+.tab-active {
+  color: #999;
+  background-color: #FFF;
+}
+.content {
+  padding-top: 20px;
+}
