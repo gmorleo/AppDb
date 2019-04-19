@@ -41,7 +41,7 @@ export class ElencoMongoComponent implements OnInit {
     console.log(this.persona);
     this.personaService.saveMongo(this.persona).subscribe( res => {
       console.log(res);
-      this.persone.push(this.persona);
+      this.persone.push(res);
     });
   }
 
@@ -73,6 +73,8 @@ export class ElencoMongoComponent implements OnInit {
   getAll() {
     this.personaService.getAllMongo().subscribe( persona => {
       this.persone = persona;
+      console.log("ciao");
+      console.log(this.persone);
     });
   }
 }

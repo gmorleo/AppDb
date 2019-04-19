@@ -64,7 +64,7 @@ export class PersonaService {
 
   getAllMongo(): Observable<PersonaMongo[]> {
 
-    let request = this.http.get<PersonaMongo[]>(this.apiUrlMongo+ "/getAll",  {headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'} });
+    let request = this.http.get<PersonaMongo[]>(this.apiUrlMongo+ "/getAll");
     console.log(request);
     return request;
   }
