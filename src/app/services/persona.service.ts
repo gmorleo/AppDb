@@ -85,7 +85,7 @@ export class PersonaService {
   }
 
   deleteMongo(id: string): Observable<PersonaMongo> {
-    let request = this.http.get<PersonaMongo>(this.apiUrlMongo+ "/deleteById/"+id);
+    let request = this.http.get<PersonaMongo>(this.apiUrlMongo+ "/delete/"+id);
     return request;
   }
 }
