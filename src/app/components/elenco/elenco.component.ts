@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {user} from '../../models/user';
 import {Persona} from '../../models/persona';
 import {PersonaService} from '../../services/persona.service';
 
@@ -11,8 +10,6 @@ import {PersonaService} from '../../services/persona.service';
 export class ElencoComponent implements OnInit {
 
   opt: number;
-  users: user[];
-  u: user = {} as user;
 
   persona: Persona = {} as Persona;
   persone: Persona[];

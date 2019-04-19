@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {user} from '../../models/user';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +8,6 @@ import {user} from '../../models/user';
 export class HomeComponent implements OnInit {
 
   opt: number;
-  users: user[];
-  u: user = {} as user;
   selectedTab: number;
 
   constructor() {

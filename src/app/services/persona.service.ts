@@ -1,13 +1,35 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs/index';
 import {Persona} from '../models/persona';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {ServerUrlMongo, ServerUrlMySql} from '../../environments/environment';
 import {PersonaMongo} from '../models/personaMongo';
+import {RequestOptions} from '@angular/http';
+
+
+
+const headerDict = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+const requestOptions = {
+  headers: new HttpHeaders(headerDict),
+  withCredentials: true
+};
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'my-auth-token'
+  })
+};
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class PersonaService {
   apiUrlMysql = `${ServerUrlMySql.url}/persona`;
   apiUrlMongo = `${ServerUrlMongo.url}/persona`;
@@ -41,7 +63,8 @@ export class PersonaService {
   }
 
   getAllMongo(): Observable<PersonaMongo[]> {
-    let request = this.http.get<PersonaMongo[]>(this.apiUrlMongo+ "/getAll");
+
+    let request = this.http.get<PersonaMongo[]>(this.apiUrlMongo+ "/getAll",  {headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'} });
     console.log(request);
     return request;
   }
