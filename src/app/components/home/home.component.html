@@ -1,14 +1,14 @@
 <div class="contaniner">
   <div>
     <div style="display: flex">
-      <div style="user-select: none; cursor: pointer" class="tab" [ngClass]="{'tab-active': selectedTab == 0}" (click)="showClienti()">Persone</div>
-      <div style="user-select: none; cursor: pointer" class="tab" [ngClass]="{'tab-active': selectedTab == 1}" (click)="showProdotti()"></div>
+      <div style="user-select: none; cursor: pointer" class="tab" [ngClass]="{'tab-active': selectedTab == 0}" (click)="showMySql()">MySql</div>
+      <div style="user-select: none; cursor: pointer" class="tab" [ngClass]="{'tab-active': selectedTab == 1}" (click)="showMongoDB()">MongoDB</div>
     </div>
     <div class="content" *ngIf="selectedTab == 0">
       <app-elenco></app-elenco>
     </div>
     <div class="content" *ngIf="selectedTab == 1">
-      <app-prodotto></app-prodotto>
+      <app-elenco-mongo></app-elenco-mongo>
     </div>
   </div>
 </div>

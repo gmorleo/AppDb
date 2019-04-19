@@ -21,11 +21,11 @@ export class HomeComponent implements OnInit {
 
   }
 
-  showClienti() {
+  showMySql() {
     this.selectedTab = 0;
   }
 
-  showProdotti() {
+  showMongoDB() {
     this.selectedTab = 1;
   }
 }

@@ -1,9 +1,11 @@
-export interface Cliente {
-  idCliente: number;
+export interface PersonaMongo {
+  id: string;
   nome: string;
   cognome: string;
-  doB: Date;
+  eta: number;
+  dob: string;
   indirizzo: string;
   citta: string;
   provincia: string;
 }
+

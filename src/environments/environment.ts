@@ -6,12 +6,14 @@ export const environment = {
   production: false
 };
 
-export const ServerUrl = {
+export const ServerUrlMySql = {
   /*  url: 'http://localhost:8080/SeApp'*/
   url: 'http://localhost:8080/Db'
   //url: 'http://192.168.1.8:8080/SeApp'
 };
-
+export const ServerUrlMongo = {
+  url: 'http://localhost:8080'
+};
 /*
  * In development mode, to ignore zone related error stack frames such as
  * `zone.run`, `zoneDelegate.invokeTask` for easier debugging, you can

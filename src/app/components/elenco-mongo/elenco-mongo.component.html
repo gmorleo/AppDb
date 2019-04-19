@@ -11,11 +11,11 @@
     </div>
   </div>
   <div class="table" >
-    <div class="table-row" *ngFor="let c of clienti">
-      <div class="table-column">{{c.idCliente}}</div>
+    <div class="table-row" *ngFor="let c of persone">
+      <div class="table-column">{{c.id}}</div>
       <div class="table-column">{{c.nome}}</div>
       <div class="table-column">{{c.cognome}}</div>
-      <div class="table-column">{{c.doB}}</div>
+      <div class="table-column">{{c.dob}}</div>
       <div class="table-column">{{c.indirizzo}}</div>
       <div class="table-column">{{c.citta}}</div>
       <div class="table-column">{{c.provincia}}</div>
@@ -23,31 +23,31 @@
   </div>
 </div>
 <div class="table-edit" *ngIf="opt == 1">
-  <form (submit)="insertCliente()">
+  <form (submit)="insertPersona()">
     <div style="margin: 0 auto; width: 50%;">
       <div class="form-group">
         <label class="lbl">Nome: </label>
-        <input type="text" name="nome" class="form-control" [(ngModel)]="cliente.nome">
+        <input type="text" name="nome" class="form-control" [(ngModel)]="persona.nome">
       </div>
       <div class="form-group">
         <label class="lbl">Cognome: </label>
-        <input type="text" name="cognome" class="form-control" [(ngModel)]="cliente.cognome">
+        <input type="text" name="cognome" class="form-control" [(ngModel)]="persona.cognome">
       </div>
       <div class="form-group">
         <label class="lbl">Data di Nascita: </label>
-        <input type="date" name="doB" class="form-control" [(ngModel)]="cliente.doB">
+        <input type="date" name="doB" class="form-control" [(ngModel)]="persona.dob">
       </div>
       <div class="form-group">
         <label class="lbl">Indirizzo: </label>
-        <input type="text" name="indirizzo" class="form-control" [(ngModel)]="cliente.indirizzo">
+        <input type="text" name="indirizzo" class="form-control" [(ngModel)]="persona.indirizzo">
       </div>
       <div class="form-group">
         <label class="lbl">Città: </label>
-        <input type="text" name="citta" class="form-control" [(ngModel)]="cliente.citta">
+        <input type="text" name="citta" class="form-control" [(ngModel)]="persona.citta">
       </div>
       <div class="form-group">
         <label class="lbl">Pronvincia: </label>
-        <input type="text" name="provincia" class="form-control" [(ngModel)]="cliente.provincia">
+        <input type="text" name="provincia" class="form-control" [(ngModel)]="persona.provincia">
       </div>
     </div>
     <div style="text-align: center; margin: 5px">
@@ -56,35 +56,35 @@
   </form>
 </div>
 <div class="table-edit" *ngIf="opt == 2">
-  <form (submit)="updateCliente()">
+  <form (submit)="updatePersona()">
     <div style="margin: 0 auto; width: 50%;">
       <div class="form-group">
         <label class="lbl">Id: </label>
-        <input type="text" name="idCliente" class="form-control" (change)="loadCliente()" [(ngModel)]="cliente.idCliente">
+        <input type="text" name="idPersona" class="form-control" (change)="loadPersona()" [(ngModel)]="persona.id">
       </div>
       <div class="form-group">
         <label class="lbl">Nome: </label>
-        <input type="text" name="nome" class="form-control" [(ngModel)]="cliente.nome">
+        <input type="text" name="nome" class="form-control" [(ngModel)]="persona.nome">
       </div>
       <div class="form-group">
         <label class="lbl">Cognome: </label>
-        <input type="text" name="cognome" class="form-control" [(ngModel)]="cliente.cognome">
+        <input type="text" name="cognome" class="form-control" [(ngModel)]="persona.cognome">
       </div>
       <div class="form-group">
         <label class="lbl">Data di Nascita: </label>
-        <input asp-for="MyDate" asp-format="{0:dd-MM-yyyy}"  type="date" name="doB" class="form-control" [(ngModel)]="cliente.doB">
+        <input asp-for="MyDate" asp-format="{0:dd-MM-yyyy}"  type="date" name="doB" class="form-control" [(ngModel)]="persona.dob">
       </div>
       <div class="form-group">
         <label class="lbl">Indirizzo: </label>
-        <input type="text" name="indirizzo" class="form-control" [(ngModel)]="cliente.indirizzo">
+        <input type="text" name="indirizzo" class="form-control" [(ngModel)]="persona.indirizzo">
       </div>
       <div class="form-group">
         <label class="lbl">Città: </label>
-        <input type="text" name="citta" class="form-control" [(ngModel)]="cliente.citta">
+        <input type="text" name="citta" class="form-control" [(ngModel)]="persona.citta">
       </div>
       <div class="form-group">
         <label class="lbl">Pronvincia: </label>
-        <input type="text" name="provincia" class="form-control" [(ngModel)]="cliente.provincia">
+        <input type="text" name="provincia" class="form-control" [(ngModel)]="persona.provincia">
       </div>
     </div>
     <div style="text-align: center; margin: 5px">
@@ -93,11 +93,11 @@
   </form>
 </div>
 <div class="table-edit" *ngIf="opt == 3">
-  <form (submit)="deleteCliente()">
+  <form (submit)="deletePersona()">
     <div style="margin: 0 auto; width: 50%;">
       <div class="form-group">
         <label class="lbl">Id: </label>
-        <input type="text" name="idCliente" class="form-control" (change)="loadCliente()" [(ngModel)]="cliente.idCliente">
+        <input type="text" name="idPersona" class="form-control" (change)="loadPersona()" [(ngModel)]="persona.id">
       </div>
     </div>
     <div style="text-align: center; margin: 5px">
